@@ -5,6 +5,9 @@ import { MOCK_BOOKS, MOCK_BLOG, MOCK_QUOTES } from '../constants';
 import BookCard from '../components/BookCard';
 
 const Home: React.FC = () => {
+  // Pegamos os primeiros 4 livros do mock
+  const featuredBooks = MOCK_BOOKS.slice(0, 4);
+
   return (
     <div className="space-y-16 py-8">
       {/* Hero Section */}
@@ -12,27 +15,29 @@ const Home: React.FC = () => {
         <div className="bg-gradient-to-br from-indigo-900 to-slate-900 rounded-[2.5rem] p-8 md:p-16 text-white relative overflow-hidden shadow-2xl">
           <div className="relative z-10 max-w-2xl">
             <span className="inline-block px-3 py-1 bg-indigo-500/30 backdrop-blur-md rounded-full text-indigo-200 text-xs font-bold tracking-widest uppercase mb-6">
-              Sincronizado com Amazon via n8n
+              Curadoria Inteligente
             </span>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               A curadoria definitiva para sua <span className="text-indigo-400">próxima leitura.</span>
             </h1>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              Analisamos milhares de títulos semanalmente para trazer as melhores recomendações, 
-              lançamentos e clássicos com a inteligência artificial do Google.
+              Analisamos os best-sellers da Amazon para trazer as obras que realmente importam. Descubra livros que mudam perspectivas.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link to="/livros" className="bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all flex items-center gap-2">
-                Ver Mais Vendidos <i className="fa-solid fa-arrow-right text-xs"></i>
+                Explorar Mais Vendidos <i className="fa-solid fa-arrow-right text-xs"></i>
               </Link>
             </div>
           </div>
-          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/2 h-full hidden lg:flex items-center justify-center">
-             <div className="grid grid-cols-2 gap-4 -rotate-12 scale-110 opacity-40">
-                {[...Array(4)].map((_, i) => (
-                   <div key={i} className="w-32 h-48 bg-white/10 rounded-lg backdrop-blur-sm border border-white/20"></div>
-                ))}
-             </div>
+          
+          {/* Decorative Elements */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
+          <div className="absolute bottom-0 right-12 hidden lg:block">
+            <div className="flex gap-4 items-end opacity-20 transform rotate-12 translate-y-20">
+               {[...Array(5)].map((_, i) => (
+                 <div key={i} className="w-16 bg-white rounded-t-lg" style={{ height: `${100 + i * 30}px` }}></div>
+               ))}
+            </div>
           </div>
         </div>
       </section>
@@ -41,14 +46,14 @@ const Home: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-end justify-between mb-8">
           <div>
-            <h2 className="text-3xl font-bold text-slate-900 mb-2">Os 50 livros mais vendidos</h2>
-            <p className="text-slate-500">1º semana de janeiro de 2026</p>
+            <h2 className="text-3xl font-bold text-slate-900 mb-2">Destaques da Semana</h2>
+            <p className="text-slate-500">Títulos que não saem da lista de desejos.</p>
           </div>
-          <Link to="/livros" className="text-indigo-600 font-bold hover:underline">Ver tudo</Link>
+          <Link to="/livros" className="text-indigo-600 font-bold hover:underline">Ver todos</Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {MOCK_BOOKS.slice(0, 4).map((book, idx) => (
-            <BookCard key={idx} book={book} />
+          {featuredBooks.map((book) => (
+            <BookCard key={book.id} book={book} />
           ))}
         </div>
       </section>

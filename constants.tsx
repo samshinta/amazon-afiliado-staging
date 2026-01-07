@@ -11,7 +11,7 @@ const generateMockBooks = (): Book[] => {
       link: 'https://amzn.to/3Yo4Vi1',
       img: 'https://i.imgur.com/BTmFOnM.jpg'
     },
-    { t: 'Hábitos Atômicos', a: 'James Clear', c: 'Autoajuda', p: 45.00 },
+    { t: 'Hábitos Atômicos', a: 'James Clear', c: 'Autoajuda', link: 'https://amzn.to/4pjcy4a',  img: 'https://i.imgur.com/yDAQkM4.jpg', p: 45.00 },
     { t: 'O Homem Mais Rico da Babilônia', a: 'George S. Clason', c: 'Finanças', p: 22.90 },
     { t: 'Pai Rico, Pai Pobre', a: 'Robert Kiyosaki', c: 'Finanças', p: 49.90 },
     { t: 'Os Segredos da Mente Milionária', a: 'T. Harv Eker', c: 'Finanças', p: 32.50 },
