@@ -1,11 +1,9 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MOCK_BOOKS, MOCK_BLOG, MOCK_QUOTES } from '../constants';
 import BookCard from '../components/BookCard';
 
 const Home: React.FC = () => {
-  // Pegamos os primeiros 4 livros do mock
   const featuredBooks = MOCK_BOOKS.slice(0, 4);
 
   return (
@@ -21,16 +19,15 @@ const Home: React.FC = () => {
               A curadoria definitiva para sua <span className="text-indigo-400">próxima leitura.</span>
             </h1>
             <p className="text-lg text-slate-300 mb-8 leading-relaxed">
-              Analisamos os best-sellers da Amazon para trazer as obras que realmente importam. Descubra livros que mudam perspectivas.
+              Analisamos as tendências literárias para trazer as obras que realmente importam. Descubra livros que mudam perspectivas e expandem horizontes.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link to="/livros" className="bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all flex items-center gap-2">
+              <Link to="/livros" className="bg-white text-indigo-900 px-8 py-4 rounded-xl font-bold hover:bg-indigo-50 transition-all flex items-center gap-2 shadow-lg shadow-white/10">
                 Explorar Mais Vendidos <i className="fa-solid fa-arrow-right text-xs"></i>
               </Link>
             </div>
           </div>
           
-          {/* Decorative Elements */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-indigo-500/10 rounded-full -mr-24 -mt-24 blur-3xl"></div>
           <div className="absolute bottom-0 right-12 hidden lg:block">
             <div className="flex gap-4 items-end opacity-20 transform rotate-12 translate-y-20">
@@ -47,10 +44,13 @@ const Home: React.FC = () => {
         <div className="flex items-end justify-between mb-8">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-2">Destaques da Semana</h2>
-            <p className="text-slate-500">Títulos que não saem da lista de desejos.</p>
+            <p className="text-slate-500">Títulos que estão dando o que falar nas comunidades literárias.</p>
           </div>
-          <Link to="/livros" className="text-indigo-600 font-bold hover:underline">Ver todos</Link>
+          <Link to="/livros" className="text-indigo-600 font-bold hover:underline flex items-center gap-2">
+            Ver todos
+          </Link>
         </div>
+        
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {featuredBooks.map((book) => (
             <BookCard key={book.id} book={book} />
@@ -59,8 +59,8 @@ const Home: React.FC = () => {
       </section>
 
       {/* Quote Section */}
-      <section className="bg-stone-100 py-16">
-        <div className="max-w-4xl mx-auto px-4 text-center">
+      <section className="bg-stone-100 py-16 relative overflow-hidden">
+        <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
           <i className="fa-solid fa-quote-left text-4xl text-indigo-200 mb-6"></i>
           <h2 className="text-3xl serif italic text-slate-800 leading-relaxed mb-6">
             "{MOCK_QUOTES[0].text}"
@@ -79,7 +79,7 @@ const Home: React.FC = () => {
           {MOCK_BLOG.map(post => (
             <Link to={`/blog/${post.id}`} key={post.id} className="group cursor-pointer block">
               <div className="aspect-video rounded-2xl overflow-hidden mb-4 shadow-sm border border-stone-200">
-                <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>
               <div className="space-y-2">
                 <span className="text-xs font-bold text-indigo-600 uppercase">{post.tags[0]}</span>

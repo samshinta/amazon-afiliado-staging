@@ -1,4 +1,3 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { MOCK_BOOKS } from '../constants';
@@ -24,8 +23,10 @@ const Books: React.FC = () => {
 
   const filteredBooks = useMemo(() => {
     return MOCK_BOOKS.filter(book => {
-      const matchesSearch = book.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                           book.author.toLowerCase().includes(searchTerm.toLowerCase());
+      const title = book.title || "";
+      const author = book.author || "";
+      const matchesSearch = title.toLowerCase().includes(searchTerm.toLowerCase()) || 
+                           author.toLowerCase().includes(searchTerm.toLowerCase());
       const matchesCategory = selectedCategory === 'Todas' || book.category === selectedCategory;
       return matchesSearch && matchesCategory;
     });
@@ -35,9 +36,9 @@ const Books: React.FC = () => {
     <div className="min-h-screen py-12 bg-stone-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
-          <h1 className="text-4xl font-bold text-slate-900 mb-4">Os Mais Vendidos da Amazon</h1>
+          <h1 className="text-4xl font-bold text-slate-900 mb-4">Os Mais Vendidos</h1>
           <p className="text-slate-500">
-            Curadoria exclusiva dos títulos que estão moldando a cultura atual.
+            Curadoria exclusiva dos títulos que estão moldando a cultura atual, atualizada regularmente com base nos algoritmos da Amazon.
           </p>
         </div>
 
@@ -54,7 +55,7 @@ const Books: React.FC = () => {
           </div>
           <div className="md:w-64">
             <select 
-              className="w-full px-4 py-3 bg-white border border-stone-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all shadow-sm appearance-none"
+              className="w-full px-4 py-3 bg-white border border-stone-200 rounded-xl focus:ring-2 focus:ring-indigo-500 outline-none transition-all shadow-sm appearance-none cursor-pointer"
               value={selectedCategory}
               onChange={(e) => setSelectedCategory(e.target.value)}
             >
@@ -67,7 +68,9 @@ const Books: React.FC = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {filteredBooks.map((book) => (
-            <BookCard key={book.id} book={book} />
+            <div key={book.id} className="animate-fade-in">
+              <BookCard book={book} />
+            </div>
           ))}
         </div>
 
@@ -82,7 +85,7 @@ const Books: React.FC = () => {
           <div className="max-w-3xl mx-auto text-center">
             <i className="fa-brands fa-amazon text-3xl text-slate-300 mb-4"></i>
             <p className="text-xs text-slate-500 leading-relaxed italic">
-              "Como associado da Amazon, ganho com compras qualificadas." Os preços e disponibilidade podem variar de acordo com a região e o estoque da Amazon.
+              "Como associado da Amazon, ganho com compras qualificadas." Os preços e disponibilidade podem sofrer alterações conforme o estoque da Amazon Brasil.
             </p>
           </div>
         </div>

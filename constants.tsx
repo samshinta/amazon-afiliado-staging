@@ -1,4 +1,3 @@
-
 import { Book, BlogPost, Quote, Author, Sebo } from './types';
 
 const generateMockBooks = (): Book[] => {
@@ -26,7 +25,8 @@ const generateMockBooks = (): Book[] => {
       c: 'Finanças', 
       p: 49.90,
       link: 'https://amzn.to/3LoLp1V',
-      img: 'https://i.imgur.com/T3FNoKa.jpg'
+      img: 'https://imgur.com/SGsNa1o.jpg'
+      
     },
     { t: 'Os Segredos da Mente Milionária', a: 'T. Harv Eker', c: 'Finanças', p: 32.50 },
     { t: 'Mais Esperto que o Diabo', a: 'Napoleon Hill', c: 'Autoajuda', p: 29.90 },
@@ -103,7 +103,7 @@ export const MOCK_BLOG: BlogPost[] = [
       A ficção científica é frequentemente vista como entretenimento sobre naves espaciais e tecnologia futurista. No entanto, sua função vai muito além da diversão: ela atua como um laboratório mental que expande a nossa capacidade de pensar fora da caixa.
 
       ### Flexibilidade Cognitiva
-      Ler sobre mundos que operam sob regras físicas ou sociais radicalmente diferentes das nossas exige um esforço cerebral único. O cérebro precisa constantemente atualizar seus modelos mentais para acompanhar a narrativa. Esse exercício fortaleolce a **flexibilidade cognitiva**, a habilidade de alternar entre diferentes conceitos ou pensar sobre múltiplos conceitos simultaneamente.
+      Ler sobre mundos que operam sob regras físicas ou sociais radicalmente diferentes das nossas exige um esforço cerebral único. O cérebro precisa constantemente atualizar seus modelos mentais para acompanhar a narrativa. Esse exercício fortaleuece a **flexibilidade cognitiva**, a habilidade de alternar entre diferentes conceitos ou pensar sobre múltiplos conceitos simultaneamente.
 
       ### Simulação Social e Teoria da Mente
       Diferente de outros gêneros, a ficção científica nos coloca em contato com o "verdadeiramente outro" — sejam alienígenas, inteligências artificiais ou sociedades distópicas. Isso treina a nossa empatia de uma forma específica.

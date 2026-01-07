@@ -1,15 +1,16 @@
+
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Navbar from './components/Navbar.tsx';
-import AIAssistant from './components/AIAssistant.tsx';
-import Home from './pages/Home.tsx';
-import Sebos from './pages/Sebos.tsx';
-import Books from './pages/Books.tsx';
-import Quotes from './pages/Quotes.tsx';
-import Authors from './pages/Authors.tsx';
-import Blog from './pages/Blog.tsx';
-import BlogPostPage from './pages/BlogPostPage.tsx';
-import Contact from './pages/Contact.tsx';
+import Navbar from './components/Navbar';
+import AIAssistant from './components/AIAssistant';
+import Home from './pages/Home';
+import Sebos from './pages/Sebos';
+import Books from './pages/Books';
+import Quotes from './pages/Quotes';
+import Authors from './pages/Authors';
+import Blog from './pages/Blog';
+import BlogPostPage from './pages/BlogPostPage';
+import Contact from './pages/Contact';
 
 const App: React.FC = () => {
   return (
