@@ -36,7 +36,7 @@ const generateMockBooks = (): Book[] => {
       img: 'https://i.imgur.com/FATyYfN.jpg' 
     },
 
-    { t: 'Mais Esperto que o Diabo', a: 'Napoleon Hill', c: 'Autoajuda', p: 29.90, link: 'https://amzn.to/3NazBB2https://amzn.to/3NazBB2', img: 'https://i.imgur.com/4csvkhS.jpg'  },
+    { t: 'Mais Esperto que o Diabo', a: 'Napoleon Hill', c: 'Autoajuda', p: 29.90 },
     { t: 'A Sutil Arte de Ligar o F*da-se', a: 'Mark Manson', c: 'Autoajuda', p: 38.00 },
     { t: 'Mulheres que Correm com os Lobos', a: 'Clarissa Pinkola Estés', c: 'Psicologia', p: 54.90 },
     { t: '1984', a: 'George Orwell', c: 'Clássicos', p: 25.00 },
@@ -105,12 +105,12 @@ export const MOCK_BLOG: BlogPost[] = [
   {
     id: '1',
     title: 'Por que ler ficção científica aumenta a criatividade?',
-    excerpt: 'Descubra como mundos imaginários podem expandir seus horizons cognitivos.',
+    excerpt: 'Descubra como mundos imaginários podem expandir seus horizontes cognitivos.',
     content: `
       A ficção científica é frequentemente vista como entretenimento sobre naves espaciais e tecnologia futurista. No entanto, sua função vai muito além da diversão: ela atua como um laboratório mental que expande a nossa capacidade de pensar fora da caixa.
 
       ### Flexibilidade Cognitiva
-      Ler sobre mundos que operam sob regras físicas ou sociais radicalmente diferentes das nossas exige um esforço cerebral único. O cérebro precisa constantemente atualizar seus modelos mentais para acompanhar a narrativa. Esse exercício fortalece a **flexibilidade cognitiva**, a habilidade de alternar entre diferentes conceitos ou pensar sobre múltiplos conceitos simultaneamente.
+      Ler sobre mundos que operam sob regras físicas ou sociais radicalmente diferentes das nossas exige um esforço cerebral único. O cérebro precisa constantemente atualizar seus modelos mentais para acompanhar a narrativa. Esse exercício fortaleuece a **flexibilidade cognitiva**, a habilidade de alternar entre diferentes conceitos ou pensar sobre múltiplos conceitos simultaneamente.
 
       ### Simulação Social e Teoria da Mente
       Diferente de outros gêneros, a ficção científica nos coloca em contato com o "verdadeiramente outro" — sejam alienígenas, inteligências artificiais ou sociedades distópicas. Isso treina a nossa empatia de uma forma específica.
