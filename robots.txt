@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Allow: /livros
+Allow: /blog
+Allow: /autores
+Allow: /frases
+Allow: /sebos
+
+# Evitar indexação de buscas internas para prevenir conteúdo duplicado
+Disallow: /*?search=
+Disallow: /*?category=
+
+# Localização do Sitemap
+Sitemap: https://melhoresprecos.shop/sitemap.xml
