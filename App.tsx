@@ -65,7 +65,7 @@ const App: React.FC = () => {
                 <ul className="space-y-4 text-sm">
                   <li><a href="#" className="hover:text-indigo-400">Privacidade</a></li>
                   <li><a href="#" className="hover:text-indigo-400">Termos de Uso</a></li>
-                  <li><Link to="/contato" className="hover:text-indigo-400">Contato</Link></li>
+                  <li><Link to="/contato" className="hover:text-indigo-400">Email</Link></li>
                 </ul>
               </div>
             </div>
