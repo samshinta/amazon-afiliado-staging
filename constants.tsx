@@ -1,4 +1,5 @@
-import { Book, BlogPost, Quote, Author, Sebo } from './types';
+
+import { Book, BlogPost, Quote, Author, Sebo, OfferProduct } from './types';
 
 const generateMockBooks = (): Book[] => {
   const titles = [
@@ -50,6 +51,75 @@ const generateMockBooks = (): Book[] => {
 };
 
 export const MOCK_BOOKS: Book[] = generateMockBooks();
+
+export const MOCK_OFFERS: OfferProduct[] = [
+  {
+    id: 'off-1',
+    title: 'Kindle Paperwhite Signature Edition 32 GB',
+    category: 'Tecnologia',
+    description: 'Leitor de livros digitais com tela de 6,8” e iluminação ajustável.',
+    price: 949.00,
+    oldPrice: 1199.00,
+    discount: 20,
+    imageUrl: 'https://m.media-amazon.com/images/I/719fHkAnRcL._AC_SL1500_.jpg',
+    amazonLink: 'https://amzn.to/3PjL6R1'
+  },
+  {
+    id: 'off-2',
+    title: 'Huggies Supreme Care Fralda G 140 Unidades',
+    category: 'Bebê',
+    description: 'Máxima proteção e conforto para o seu bebê com tecnologia Huggies.',
+    price: 174.90,
+    oldPrice: 229.90,
+    discount: 23,
+    imageUrl: 'https://m.media-amazon.com/images/I/71C78L1R9zL._AC_SL1500_.jpg',
+    amazonLink: 'https://amzn.to/3PjL6R1'
+  },
+  {
+    id: 'off-3',
+    title: 'Impressora Multifuncional HP Smart Tank 581',
+    category: 'Informática',
+    description: 'Tanque de tinta de alta capacidade para impressões coloridas de baixo custo.',
+    price: 799.90,
+    oldPrice: 1099.00,
+    discount: 27,
+    imageUrl: 'https://m.media-amazon.com/images/I/51f9S-z-i5L._AC_SL1200_.jpg',
+    amazonLink: 'https://amzn.to/3PjL6R1'
+  },
+  {
+    id: 'off-4',
+    title: 'Personal Papel Higiênico Vip Folha Tripla 32 Rolos',
+    category: 'Casa',
+    description: 'Maciez e resistência superior com folha tripla de alta qualidade.',
+    price: 47.92,
+    oldPrice: 65.20,
+    discount: 26,
+    imageUrl: 'https://m.media-amazon.com/images/I/61k8YV+09pL._AC_SL1000_.jpg',
+    amazonLink: 'https://amzn.to/3PjL6R1'
+  },
+  {
+    id: 'off-5',
+    title: 'Lápis De Cor Faber-Castell Ecolápis 24 Cores',
+    category: 'Papelaria',
+    description: 'Cores vibrantes e mina macia para desenhos incríveis.',
+    price: 44.12,
+    oldPrice: 75.17,
+    discount: 41,
+    imageUrl: 'https://m.media-amazon.com/images/I/71u-O4Uv0XL._AC_SL1500_.jpg',
+    amazonLink: 'https://amzn.to/3PjL6R1'
+  },
+  {
+    id: 'off-6',
+    title: 'Chocolate M&M\'S Ao Leite 1kg',
+    category: 'Alimentos',
+    description: 'Deliciosos confeitos de chocolate ao leite coloridos em embalagem econômica.',
+    price: 69.90,
+    oldPrice: 94.49,
+    discount: 26,
+    imageUrl: 'https://m.media-amazon.com/images/I/61I2o8-p65L._AC_SL1000_.jpg',
+    amazonLink: 'https://amzn.to/3PjL6R1'
+  }
+];
 
 export const MOCK_BLOG: BlogPost[] = [
   {

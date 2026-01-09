@@ -10,6 +10,7 @@ import Authors from './pages/Authors';
 import Blog from './pages/Blog';
 import BlogPostPage from './pages/BlogPostPage';
 import Contact from './pages/Contact';
+import Offers from './pages/Offers';
 
 const App: React.FC = () => {
   return (
@@ -26,6 +27,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/livros" element={<Books />} />
+            <Route path="/ofertas" element={<Offers />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:id" element={<BlogPostPage />} />
             <Route path="/autores" element={<Authors />} />
@@ -60,6 +62,7 @@ const App: React.FC = () => {
                 <h4 className="text-white font-bold mb-6">Navegação</h4>
                 <ul className="space-y-4 text-sm">
                   <li><Link to="/livros" className="hover:text-indigo-400">Mais Vendidos</Link></li>
+                  <li><Link to="/ofertas" className="hover:text-indigo-400">Ofertas do Dia</Link></li>
                   <li><Link to="/blog" className="hover:text-indigo-400">Blog</Link></li>
                   <li><Link to="/autores" className="hover:text-indigo-400">Autores</Link></li>
                   <li><Link to="/frases" className="hover:text-indigo-400">Frases</Link></li>

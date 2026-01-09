@@ -1,3 +1,4 @@
+
 LOG DE ALTERAÇÕES - MelhoresPreços (Homologação)
 
 1. Ambiente de Homologação:
@@ -30,3 +31,10 @@ LOG DE ALTERAÇÕES - MelhoresPreços (Homologação)
    - Remoção do formulário de indicação de novos sebos.
    - Substituição por um Call-to-Action (CTA) direto para o e-mail: contato@melhoresprecos.shop.
    [Arquivo: pages/Sebos.tsx]
+
+7. Nova Página de Ofertas:
+   - Criação de uma seção dedicada para produtos variados (Kindle, Informática, Casa, etc.).
+   - Implementação de sistema de cards com cálculo de desconto (X% OFF).
+   - Inclusão de disclaimer obrigatório de afiliado Amazon para produtos físicos.
+   - Atualização da navegação (Navbar e Rodapé) para incluir o novo link.
+   [Arquivos: types.ts, constants.tsx, pages/Offers.tsx, App.tsx, Navbar.tsx]

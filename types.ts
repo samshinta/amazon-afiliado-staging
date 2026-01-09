@@ -14,6 +14,18 @@ export interface Book {
   updatedAt: string;
 }
 
+export interface OfferProduct {
+  id: string;
+  title: string;
+  category: string;
+  description: string;
+  price: number;
+  oldPrice: number;
+  discount: number;
+  imageUrl: string;
+  amazonLink: string;
+}
+
 export interface BlogPost {
   id: string;
   title: string;
