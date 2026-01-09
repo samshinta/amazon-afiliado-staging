@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
@@ -14,6 +15,11 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="min-h-screen flex flex-col">
+        {/* Banner de Homologação */}
+        <div className="bg-amber-100 border-b border-amber-200 text-amber-800 text-[10px] uppercase font-bold text-center py-1 tracking-widest">
+          Ambiente de Homologação - MelhoresPrecos - homologacao
+        </div>
+        
         <Navbar />
         
         <main className="flex-grow">
@@ -35,7 +41,7 @@ const App: React.FC = () => {
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center gap-2 mb-6">
                   <i className="fa-solid fa-book-open text-indigo-400 text-2xl"></i>
-                  <span className="text-xl font-bold tracking-tight text-white">MelhoresPreços<span className="text-indigo-400">.shop</span></span>
+                  <span className="text-xl font-bold tracking-tight text-white">MelhoresPreços<span className="text-indigo-400"> - homologação</span></span>
                 </div>
                 <p className="max-w-sm mb-6">
                   Seu portal inteligente para encontrar o próximo livro. 
@@ -65,12 +71,12 @@ const App: React.FC = () => {
                 <ul className="space-y-4 text-sm">
                   <li><a href="#" className="hover:text-indigo-400">Privacidade</a></li>
                   <li><a href="#" className="hover:text-indigo-400">Termos de Uso</a></li>
-                  <li><Link to="/contato" className="hover:text-indigo-400">Email</Link></li>
+                  <li><a href="mailto:contato@melhoresprecos.shop" className="hover:text-indigo-400 text-indigo-300 font-medium">contato@melhoresprecos.shop</a></li>
                 </ul>
               </div>
             </div>
             <div className="mt-12 pt-8 border-t border-slate-800 text-center text-xs space-y-2">
-              <p>&copy; {new Date().getFullYear()} MelhoresPreços.shop - Todos os direitos reservados.</p>
+              <p>&copy; {new Date().getFullYear()} MelhoresPreços - homologacao. Todos os direitos reservados.</p>
               <p className="text-slate-500 font-medium italic">"Como associado da Amazon, ganho com compras qualificadas."</p>
             </div>
           </div>

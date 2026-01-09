@@ -1,7 +1,7 @@
+
 import React, { useState } from 'react';
 import { MOCK_SEBOS } from '../constants';
 import { Sebo } from '../types';
-import ContactForm from '../components/ContactForm';
 
 const Sebos: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'SP' | 'RJ' | 'MG'>('SP');
@@ -113,27 +113,24 @@ const Sebos: React.FC = () => {
           </div>
         )}
 
-        {/* Formulário de Indicação de Sebo */}
-        <section className="bg-slate-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl">
+        {/* CTA de Indicação de Sebo (Substituído formulário por email direto) */}
+        <section className="bg-slate-900 rounded-[3rem] p-8 md:p-16 relative overflow-hidden shadow-2xl text-center">
           <div className="absolute top-0 left-0 w-96 h-96 bg-indigo-500/10 rounded-full -ml-48 -mt-48 blur-3xl"></div>
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 serif">Conhece um sebo incrível?</h2>
-              <p className="text-indigo-100/70 text-lg mb-8 leading-relaxed italic">
-                A nossa base de dados é mantida pela comunidade. Se você frequenta uma livraria de usados que merece ser descoberta por mais pessoas, envie-nos os detalhes!
-              </p>
-              <ul className="space-y-4 text-white/80">
-                <li className="flex items-center gap-3"><i className="fa-solid fa-check text-indigo-400"></i> Localização precisa</li>
-                <li className="flex items-center gap-3"><i className="fa-solid fa-check text-indigo-400"></i> Contato atualizado</li>
-                <li className="flex items-center gap-3"><i className="fa-solid fa-check text-indigo-400"></i> Especialidade do acervo</li>
-              </ul>
-            </div>
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 serif">Conhece um sebo incrível?</h2>
+            <p className="text-indigo-100/70 text-lg mb-8 leading-relaxed italic">
+              A nossa base de dados é mantida pela comunidade. Se você frequenta uma livraria de usados que merece ser descoberta por mais pessoas, envie-nos os detalhes por e-mail!
+            </p>
             
-            <ContactForm 
-              theme="dark"
-              title="Indicar novo Sebo"
-              description="Sua sugestão será analisada por nossa equipe e incluída na próxima atualização da lista."
-            />
+            <div className="flex flex-col items-center gap-6">
+              <a 
+                href="mailto:contato@melhoresprecos.shop?subject=Indicação de Novo Sebo" 
+                className="inline-flex items-center gap-3 px-10 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-2xl font-bold text-lg shadow-xl shadow-indigo-900/20 transition-all transform hover:scale-105"
+              >
+                <i className="fa-solid fa-paper-plane text-sm"></i> Indicar agora por E-mail
+              </a>
+              <p className="text-indigo-300/50 text-sm font-medium tracking-wider">contato@melhoresprecos.shop</p>
+            </div>
           </div>
         </section>
       </div>

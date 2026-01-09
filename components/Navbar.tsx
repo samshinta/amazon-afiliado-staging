@@ -21,7 +21,10 @@ const Navbar: React.FC = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
               <i className="fa-solid fa-book-open text-indigo-600 text-2xl"></i>
-              <span className="text-xl font-bold tracking-tight text-slate-800">MelhoresPreços<span className="text-indigo-600">.shop</span></span>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold tracking-tight text-slate-800 leading-none">MelhoresPreços<span className="text-indigo-600">.homolog</span></span>
+                <span className="text-[9px] font-bold text-indigo-500 uppercase tracking-tighter">Ambiente de Testes</span>
+              </div>
             </Link>
           </div>
           
