@@ -1,0 +1,7 @@
+{
+  "name": "MelhoresPrecos - homologacao",
+  "description": "Ambiente de homologação para o comparador de preços de livros com integração de afiliados e IA para análise de ofertas.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
