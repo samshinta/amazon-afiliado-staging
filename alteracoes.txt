@@ -3,24 +3,30 @@ LOG DE ALTERAÇÕES - MelhoresPreços (Homologação)
 1. Ambiente de Homologação:
    - Configuração de banners informativos no topo e rodapé indicando "Ambiente de Testes".
    - Atualização do metadados do projeto para identificação clara da versão.
+   [Arquivos: metadata.json, index.html, App.tsx]
 
 2. Identidade Visual:
    - Alteração do logotipo na Navbar para incluir o sufixo ".homolog".
    - Inclusão de etiquetas de status beta e avisos de segurança sobre compras reais.
+   [Arquivos: components/Navbar.tsx, App.tsx]
 
 3. Rodapé e Contatos:
    - Substituição do formulário de newsletter/email no rodapé pelo link direto: contato@melhoresprecos.shop.
    - Implementação de funcionalidade 'mailto' para abertura direta do cliente de e-mail.
    - Manutenção das redes sociais e links de navegação.
+   [Arquivo: App.tsx]
 
 4. Funcionalidades de Afiliado:
    - Preservação da integração com Amazon para compras qualificadas.
    - Atualização do disclaimer legal de associado.
+   [Arquivos: App.tsx, pages/Books.tsx]
 
 5. Infraestrutura:
    - Ajustes no arquivo de configuração do Vite para suporte a variáveis de ambiente e caminhos absolutos.
    - Sincronização de mock data (livros, autores, sebos) para testes de interface.
+   [Arquivos: vite.config.ts, constants.tsx]
 
 6. Página de Sebos:
    - Remoção do formulário de indicação de novos sebos.
    - Substituição por um Call-to-Action (CTA) direto para o e-mail: contato@melhoresprecos.shop.
+   [Arquivo: pages/Sebos.tsx]
