@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "melhoresprecos-afiliados",
   "version": "1.0.0",
   "description": "Site de afiliados de livros com IA",
@@ -14,26 +13,3 @@
     "esbuild": "^0.20.1"
   }
 }
-=======
-  "name": "melhoresprecos---homologacao",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "react-dom": "^19.2.3",
-    "react": "^19.2.3",
-    "@google/genai": "^1.35.0"
-  },
-  "devDependencies": {
-    "@types/node": "^22.14.0",
-    "@vitejs/plugin-react": "^5.0.0",
-    "typescript": "~5.8.2",
-    "vite": "^6.2.0"
-  }
-}
->>>>>>> cf8524a2e1ed6d2832c5fdd22289fa7679c426b8
