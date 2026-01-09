@@ -1,5 +1,13 @@
 {
+<<<<<<< HEAD
   "name": "MelhoresPreços - Afiliados de Livros",
   "description": "Plataforma de afiliados para os livros mais vendidos da Amazon com curadoria especializada e recomendações literárias profundas.",
   "requestFramePermissions": []
+=======
+  "name": "MelhoresPrecos - homologacao",
+  "description": "Ambiente de homologação para o comparador de preços de livros com integração de afiliados e IA para análise de ofertas.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+>>>>>>> cf8524a2e1ed6d2832c5fdd22289fa7679c426b8
 }
