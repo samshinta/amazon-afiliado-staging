@@ -14,7 +14,7 @@ const Offers: React.FC = () => {
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 serif">Melhores Ofertas do Dia</h1>
           <p className="text-lg text-slate-500 max-w-2xl mx-auto italic">
             Confira recomendações de produtos selecionados com os maiores descontos da Amazon Brasil. 
-            Atualizado em tempo real para sua economia.
+            
           </p>
         </div>
 

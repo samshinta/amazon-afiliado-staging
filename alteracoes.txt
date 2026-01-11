@@ -38,3 +38,8 @@ LOG DE ALTERAÇÕES - MelhoresPreços (Homologação)
    - Inclusão de disclaimer obrigatório de afiliado Amazon para produtos físicos.
    - Atualização da navegação (Navbar e Rodapé) para incluir o novo link.
    [Arquivos: types.ts, constants.tsx, pages/Offers.tsx, App.tsx, Navbar.tsx]
+
+8. Atualização Kindle Paperwhite:
+   - Atualização do link de imagem para 'https://i.imgur.com/a/xTGiBZw.jpg' (direto do album com prefixo /a/).
+   - Atualização do link de afiliado Amazon para 'https://amzn.to/3Ngkrdl'.
+   [Arquivo: constants.tsx]

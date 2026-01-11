@@ -61,8 +61,8 @@ export const MOCK_OFFERS: OfferProduct[] = [
     price: 949.00,
     oldPrice: 1199.00,
     discount: 20,
-    imageUrl: 'https://m.media-amazon.com/images/I/719fHkAnRcL._AC_SL1500_.jpg',
-    amazonLink: 'https://amzn.to/3PjL6R1'
+    imageUrl: 'https://i.imgur.com/YgU1AA3.jpg',
+    amazonLink: 'https://amzn.to/4qeMTe6'
   },
   {
     id: 'off-2',
@@ -72,8 +72,8 @@ export const MOCK_OFFERS: OfferProduct[] = [
     price: 174.90,
     oldPrice: 229.90,
     discount: 23,
-    imageUrl: 'https://m.media-amazon.com/images/I/71C78L1R9zL._AC_SL1500_.jpg',
-    amazonLink: 'https://amzn.to/3PjL6R1'
+    imageUrl: 'https://i.imgur.com/d5lPqwL.jpg',
+    amazonLink: 'https://amzn.to/4puRaJv'
   },
   {
     id: 'off-3',
@@ -83,8 +83,8 @@ export const MOCK_OFFERS: OfferProduct[] = [
     price: 799.90,
     oldPrice: 1099.00,
     discount: 27,
-    imageUrl: 'https://m.media-amazon.com/images/I/51f9S-z-i5L._AC_SL1200_.jpg',
-    amazonLink: 'https://amzn.to/3PjL6R1'
+    imageUrl: 'https://i.imgur.com/AsgzCNK.jpg',
+    amazonLink: 'https://amzn.to/4bpvFpR'
   },
   {
     id: 'off-4',
@@ -94,8 +94,8 @@ export const MOCK_OFFERS: OfferProduct[] = [
     price: 47.92,
     oldPrice: 65.20,
     discount: 26,
-    imageUrl: 'https://m.media-amazon.com/images/I/61k8YV+09pL._AC_SL1000_.jpg',
-    amazonLink: 'https://amzn.to/3PjL6R1'
+    imageUrl: 'https://i.imgur.com/gUfqKqH.jpg',
+    amazonLink: 'https://amzn.to/450w5ze'
   },
   {
     id: 'off-5',
@@ -105,19 +105,19 @@ export const MOCK_OFFERS: OfferProduct[] = [
     price: 44.12,
     oldPrice: 75.17,
     discount: 41,
-    imageUrl: 'https://m.media-amazon.com/images/I/71u-O4Uv0XL._AC_SL1500_.jpg',
-    amazonLink: 'https://amzn.to/3PjL6R1'
+    imageUrl: 'https://i.imgur.com/lx5GP87.jpg',
+    amazonLink: 'https://amzn.to/3LGJWnE'
   },
   {
     id: 'off-6',
-    title: 'Chocolate M&M\'S Ao Leite 1kg',
-    category: 'Alimentos',
-    description: 'Deliciosos confeitos de chocolate ao leite coloridos em embalagem econômica.',
-    price: 69.90,
-    oldPrice: 94.49,
-    discount: 26,
-    imageUrl: 'https://m.media-amazon.com/images/I/61I2o8-p65L._AC_SL1000_.jpg',
-    amazonLink: 'https://amzn.to/3PjL6R1'
+    title: 'NIVEA Sérum Facial Cellular Luminous 630 30ml',
+    category: 'Beleza',
+    description: 'Deixa a pele uniforme, Reduz marcas escurecidas',
+    price: 61.79,
+    oldPrice: 129.90,
+    discount: 52,
+    imageUrl: 'https://i.imgur.com/6NOZVsM.jpg',
+    amazonLink: 'https://amzn.to/3YzyBIY'
   }
 ];
 
@@ -138,7 +138,7 @@ export const MOCK_BLOG: BlogPost[] = [
       > "A função da ficção é a abstração e simulação da experiência social." 
       > — **Raymond Mar & Keith Oatley (2008)**, York University.
 
-      O estudo de Mar e Oatley sugere que a leitura de ficção treina a **Teoria da Mente**, permitindo-nos compreender melhor as intenções e emoções alheias ao simular interações sociais complexas.
+      O estudo de Mar e Oatley sugerere que a leitura de ficção treina a **Teoria da Mente**, permitindo-nos compreender melhor as intenções e emoções alheias ao simular interações sociais complexas.
 
       ### O Poder do "E se?"
       O núcleo da ficção científica é o questionamento hipotético. Ao confrontar essas perguntas, o leitor desenvolve um pensamento crítico mais aguçado e uma visão menos rígida da realidade.
@@ -196,7 +196,6 @@ export const MOCK_AUTHORS: Author[] = [
   { id: 'a22', name: "Holly Black", bio: "Mestre da fantasia feérica, autora da trilogia 'O Povo do Air', que inclui 'O Príncipe Cruel'.", imageUrl: "https://i.imgur.com/7MNyQ5l.jpg", category: "Fantasia", topBooks: ["o principe cruel"], hobby: "Coleções", country: "Estados Unidos", maritalStatus: "Casada", children: "1 filho" },
   { id: 'a23', name: "Rebecca Yarros", bio: "Autora premiada que explodiu no gênero Romantasia com seu épico de dragões 'Quarta Asa'.", imageUrl: "https://i.imgur.com/j5DvwoV.jpg", category: "Fantasia", topBooks: ["quarta asa"], hobby: "Harpa", country: "Estados Unidos", maritalStatus: "Casada", children: "6 filhos" },
   { id: 'a24', name: "Ransom Riggs", bio: "Conhecido por suas histórias fantásticas ilustradas por fotos vintage autênticas.", imageUrl: "https://i.imgur.com/Wa6rKNd.jpg", category: "Fantasia", topBooks: ["biblioteca de almas"], hobby: "Fotografia", country: "Estados Unidos", maritalStatus: "Casado", children: "1 filha" },
-  { id: 'a25', name: "Matt Haig", bio: "Escritor britânico cujas obras exploram a saúde mental e as infinitas possibilidades da vida.", imageUrl: "https://i.imgur.com/BTmFOnM.jpg", category: "Ficção", topBooks: ["A Biblioteca da Meia-Noite"], hobby: "Corrida", country: "Reino Unido", maritalStatus: "Casado", children: "2 filhos" },
 ];
 
 export const MOCK_SEBOS: Sebo[] = [
