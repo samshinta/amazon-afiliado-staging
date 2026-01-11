@@ -1,6 +1,5 @@
-
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Sebos from './pages/Sebos';
@@ -12,40 +11,10 @@ import BlogPostPage from './pages/BlogPostPage';
 import Contact from './pages/Contact';
 import Offers from './pages/Offers';
 
-const SEOManager: React.FC = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    const path = location.pathname;
-    let title = "MelhoresPreços | Curadoria de Livros";
-    let description = "Encontre os melhores preços de livros e ofertas exclusivas.";
-
-    if (path === "/livros") title = "Os Mais Vendidos | MelhoresPreços";
-    if (path === "/ofertas") title = "Ofertas do Dia | MelhoresPreços";
-    if (path === "/blog") title = "Blog Literário | MelhoresPreços";
-    if (path === "/autores") title = "Grandes Autores | MelhoresPreços";
-    if (path === "/sebos") title = "Garimpo de Sebos | MelhoresPreços";
-    if (path === "/contato") title = "Fale Conosco | MelhoresPreços";
-
-    document.title = `${title} (Homolog)`;
-    const metaDesc = document.querySelector('meta[name="description"]');
-    if (metaDesc) metaDesc.setAttribute("content", description);
-
-    window.scrollTo(0, 0);
-  }, [location]);
-
-  return null;
-};
-
 const App: React.FC = () => {
   return (
     <Router>
-      <SEOManager />
       <div className="min-h-screen flex flex-col">
-        <div className="bg-amber-100 border-b border-amber-200 text-amber-800 text-[10px] uppercase font-bold text-center py-1 tracking-widest">
-          Ambiente de Homologação - MelhoresPrecos - v2.0 SEO Optimized
-        </div>
-        
         <Navbar />
         
         <main className="flex-grow">
@@ -68,27 +37,43 @@ const App: React.FC = () => {
               <div className="col-span-1 md:col-span-2">
                 <div className="flex items-center gap-2 mb-6">
                   <i className="fa-solid fa-book-open text-indigo-400 text-2xl"></i>
-                  <span className="text-xl font-bold tracking-tight text-white">MelhoresPreços<span className="text-indigo-400">.homolog</span></span>
+                  <span className="text-xl font-bold tracking-tight text-white">MelhoresPreços<span className="text-indigo-400">.shop</span></span>
                 </div>
                 <p className="max-w-sm mb-6">
-                  Portal inteligente para encontrar sua próxima leitura. Todos os produtos vendidos pela Amazon Brasil.
+                  Seu portal inteligente para encontrar o próximo livro. 
+                  Este site não realiza vendas diretas; todos os produtos são vendidos e entregues pela Amazon.
                 </p>
+                <div className="flex gap-4">
+                  <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                    <i className="fa-brands fa-instagram text-white"></i>
+                  </a>
+                  <a href="#" className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-indigo-600 transition-colors">
+                    <i className="fa-brands fa-twitter text-white"></i>
+                  </a>
+                </div>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-6">Links Rápidos</h4>
+                <h4 className="text-white font-bold mb-6">Navegação</h4>
                 <ul className="space-y-4 text-sm">
                   <li><Link to="/livros" className="hover:text-indigo-400">Mais Vendidos</Link></li>
-                  <li><Link to="/ofertas" className="hover:text-indigo-400">Ofertas</Link></li>
                   <li><Link to="/blog" className="hover:text-indigo-400">Blog</Link></li>
+                  <li><Link to="/autores" className="hover:text-indigo-400">Autores</Link></li>
+                  <li><Link to="/frases" className="hover:text-indigo-400">Frases</Link></li>
+                  <li><Link to="/sebos" className="hover:text-indigo-400">Sebos</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-white font-bold mb-6">Fale Conosco</h4>
-                <a href="mailto:contato@melhoresprecos.shop" className="text-indigo-300 font-medium">contato@melhoresprecos.shop</a>
+                <h4 className="text-white font-bold mb-6">Informações</h4>
+                <ul className="space-y-4 text-sm">
+                  <li><a href="#" className="hover:text-indigo-400">Privacidade</a></li>
+                  <li><a href="#" className="hover:text-indigo-400">Termos de Uso</a></li>
+                  <li><Link to="/contato" className="hover:text-indigo-400">Email</Link></li>
+                </ul>
               </div>
             </div>
-            <div className="mt-12 pt-8 border-t border-slate-800 text-center text-xs">
-              <p>&copy; {new Date().getFullYear()} MelhoresPreços - Homologação. "Como associado da Amazon, ganho com compras qualificadas."</p>
+            <div className="mt-12 pt-8 border-t border-slate-800 text-center text-xs space-y-2">
+              <p>&copy; {new Date().getFullYear()} MelhoresPreços.shop - Todos os direitos reservados.</p>
+              <p className="text-slate-500 font-medium italic">"Como associado da Amazon, ganho com compras qualificadas."</p>
             </div>
           </div>
         </footer>
