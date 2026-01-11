@@ -104,6 +104,8 @@ export const MOCK_BOOKS: Book[] = generateMockBooks();
 export const MOCK_BLOG: BlogPost[] = [
   {
     id: '1',
+    // Fix: Added missing 'slug' property to comply with BlogPost interface
+    slug: 'por-que-ler-ficcao-cientifica-aumenta-a-criatividade',
     title: 'Por que ler ficção científica aumenta a criatividade?',
     excerpt: 'Descubra como mundos imaginários podem expandir seus horizontes cognitivos.',
     content: `
