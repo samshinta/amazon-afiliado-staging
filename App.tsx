@@ -12,7 +12,6 @@ import BlogPostPage from './pages/BlogPostPage';
 import Contact from './pages/Contact';
 import Offers from './pages/Offers';
 
-// Componente para gerenciar SEO Dinâmico
 const SEOManager: React.FC = () => {
   const location = useLocation();
 
@@ -32,7 +31,6 @@ const SEOManager: React.FC = () => {
     const metaDesc = document.querySelector('meta[name="description"]');
     if (metaDesc) metaDesc.setAttribute("content", description);
 
-    // Scroll to top on route change
     window.scrollTo(0, 0);
   }, [location]);
 
@@ -44,7 +42,6 @@ const App: React.FC = () => {
     <Router>
       <SEOManager />
       <div className="min-h-screen flex flex-col">
-        {/* Banner de Homologação */}
         <div className="bg-amber-100 border-b border-amber-200 text-amber-800 text-[10px] uppercase font-bold text-center py-1 tracking-widest">
           Ambiente de Homologação - MelhoresPrecos - v2.0 SEO Optimized
         </div>
