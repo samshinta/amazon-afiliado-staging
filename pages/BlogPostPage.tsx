@@ -55,7 +55,8 @@ const BlogPostPage: React.FC = () => {
           </div>
         </div>
 
-        <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed text-lg">
+        {/* whitespace-pre-wrap permite que o conteúdo formatado em Markdown apareça corretamente */}
+        <div className="prose prose-lg max-w-none text-slate-700 leading-relaxed text-lg whitespace-pre-wrap">
           {post.content}
         </div>
       </div>

@@ -43,6 +43,7 @@ export interface Quote {
   text: string;
   author: string;
   book?: string;
+  amazonLink?: string;
 }
 
 export interface Author {

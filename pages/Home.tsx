@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MOCK_BOOKS, MOCK_BLOG, MOCK_QUOTES } from '../constants';
@@ -77,7 +78,7 @@ const Home: React.FC = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {MOCK_BLOG.map(post => (
-            <Link to={`/blog/${post.id}`} key={post.id} className="group cursor-pointer block">
+            <Link to={`/blog/${post.slug}`} key={post.id} className="group cursor-pointer block">
               <div className="aspect-video rounded-2xl overflow-hidden mb-4 shadow-sm border border-stone-200">
                 <img src={post.imageUrl} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
               </div>

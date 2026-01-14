@@ -1,5 +1,6 @@
+
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Sebos from './pages/Sebos';
@@ -10,6 +11,7 @@ import Blog from './pages/Blog';
 import BlogPostPage from './pages/BlogPostPage';
 import Contact from './pages/Contact';
 import Offers from './pages/Offers';
+import ApiFeed from './pages/ApiFeed';
 
 const App: React.FC = () => {
   return (
@@ -28,6 +30,7 @@ const App: React.FC = () => {
             <Route path="/frases" element={<Quotes />} />
             <Route path="/sebos" element={<Sebos />} />
             <Route path="/contato" element={<Contact />} />
+            <Route path="/api/feed" element={<ApiFeed />} />
           </Routes>
         </main>
 
